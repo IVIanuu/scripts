@@ -76,7 +76,7 @@ fun includeModuleInSettingsGradle(moduleId: String) {
             .split(",")
             .map { it.trim() }
 
-        if (!oldModules.contains(includeTag)) {
+        if (includeTag !in oldModules) {
             val newModules = (oldModules + includeTag)
                 .sorted()
 
